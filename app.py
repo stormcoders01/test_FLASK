@@ -22,6 +22,8 @@ def result():
 
 # working with user datas
         inputs = reading.split(":")
+        inputs_01 = reading.split(":")
+       
         print(inputs)
         print(type(inputs))
 
@@ -795,7 +797,7 @@ ELEM#      NOMINAL     ACTUAL    LOW_TOL  UPP_TOL    DEV  OUT_OF_TOL   CONTROL
             os.remove(f'JBM_OK_REPORTS/BINFILES/{rep}.txt')
 
 
-        return render_template('result.html',reading1=file_1,read=reads)
+        return render_template('result.html',reading1=file_1,read=inputs_01)
 
 
 
