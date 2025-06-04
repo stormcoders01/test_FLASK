@@ -25,8 +25,8 @@ def result():
         print(inputs)
         print(type(inputs))
 
-        if " CMM CNC                                                              \r\nPART NAME      " in inputs:
-            reading=reading[979:]
+        if " CMM CNC                                                              \nPART NAME      " in inputs:
+            reading=reading[978:]
             reads="p name"
         else:
             
