@@ -42,7 +42,7 @@ def result():
                     data=data[978:]
                     reads="p name"
         else:
-                    data=data[917:]
+                    data=data[883:]
                     reads="no p name"
 
        
