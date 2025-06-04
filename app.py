@@ -30,7 +30,7 @@ def result():
             reads="p name"
         else:
             
-            reading=reading[880:]
+            reading=reading[882:]
             reads="no p name"
             
 
