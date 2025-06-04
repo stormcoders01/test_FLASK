@@ -25,8 +25,8 @@ def result():
         print(inputs)
         print(type(inputs))
 
-        if " CMM CNC                                                              \nPART NAME      " in inputs:
-            reading=reading[978:]
+        if " CMM CNC                                                              \r\nPART NAME      " in inputs:
+            reading=reading[979:]
             reads="p name"
         else:
             
@@ -741,8 +741,7 @@ PART NUMBER    : {PRG_NUMBER}
 COMMENT        : PANEL CHECKER VALIDATION-(KJ/QA/PC/{Gauge_number})                              
 ------------------------------------------------------------------------------------- 
 ELEM#      NOMINAL     ACTUAL    LOW_TOL  UPP_TOL    DEV  OUT_OF_TOL   CONTROL        
--------------------------------------------------------------------------------------
-""".format()
+------------------------------------------------------------------------------------- """.format()
 
         else:
                 style=f"""
@@ -756,8 +755,7 @@ PART NUMBER    : {PRG_NUMBER}
 COMMENT        : PANEL CHECKER VALIDATION-(KJ/QA/PC/{Gauge_number})                              
 ------------------------------------------------------------------------------------- 
 ELEM#      NOMINAL     ACTUAL    LOW_TOL  UPP_TOL    DEV  OUT_OF_TOL   CONTROL        
--------------------------------------------------------------------------------------
-""".format()                                                       
+------------------------------------------------------------------------------------ """.format()                                                       
             
 
         
