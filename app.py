@@ -36,13 +36,13 @@ def result():
         #     reads="no p name"
 
 
-        # inputs = data.split(":")
+        # inputs = reading.split(":")
 
         if " CMM CNC                                                              \nPART NAME      " in inputs:
-                    data=data[978:]
+                    reading=reading[978:]
                     reads="p name"
         else:
-                    data=data[883:]
+                    reading=reading[883:]
                     reads="no p name"
 
        
