@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="report.js" defer></script>
+    <link href='https://fonts.googleapis.com/css?family=Boogaloo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Cal Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Anybody' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Braah One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Days One' rel='stylesheet'>
+    
+    <title>JBM</title>
+</head>
+<body class="body">
+<!-- header start -->
+<header>
+    <nav>
+     <div class="nav">
+        <h1 class="main_logo">StormCoders</h1>
+        <ul class="nav-list">
+            <li><a href="">Home</a></li>
+            <li><a href="">Education</a></li>
+            <li><a href="">Certifications</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+     <div class="account"><h1>A</h1></div>
+
+     </div>
+    </nav>
+       
+</header>
+<!-- header end -->
+
+<!-- jbm logo -->
+
+<section class="jbm-body">
+      <div class="jbm-logo"> 
+        <img  class="logo" src="../static/img/jbmlogo.png" alt="jbm logo">
+      </div>
+
+<!-- jbm logo  end-->
+
+<h1 class="report_head" id="one">Cimtrix CMM Automatic Report Generator</h1>
+
+
+
+
+
+
+
+<!-- gauge details start -->
+
+
+    <div class="jbm_content">
+
+<!-- image slide show -->
+
+<div class="slidee">
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <!-- <div class="numbertext">1 / 3</div> -->
+  <img src="../static/img/cmm1.jpg" style="width:100%">
+  <!-- <div class="text">Caption Text</div> -->
+</div>
+
+<div class="mySlides fade">
+  <!-- <div class="numbertext">2 / 3</div> -->
+  <img src="../static/img/cmm2.jpg" style="width:100%">
+  <!-- <div class="text">Caption Two</div> -->
+</div>
+
+<div class="mySlides fade">
+  <!-- <div class="numbertext">3 / 3</div> -->
+  <img src="../static/img/cmm3.jpg" style="width:100%">
+  <!-- <div class="text">Caption Three</div> -->
+</div>
+
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+</div>
+
+<!-- image slid show end -->
+
+
+
+
+
+        <form class="report_form" action="/result" method="post" autocomplete="off">
+        <label for="PRG_DATE">DATE</label>
+        <input placeholder="mm-dd-yyyy" type="text" name="PRG_DATE" id="PRG_DATE">
+        <br>
+        <label for="OPERATOR">OPERATOR NAME</label>
+        <input placeholder="ANTONY" type="text" name="OPERATOR" id="OPERATOR">
+        <br>
+        <label for="PART_NAME">PART NAME</label>
+        <input placeholder=" FR DR SASH UPR RH" type="text" name="PART_NAME" id="PART_NAME">
+        <br>
+        <label for="PART_NUMBER">PART NUMBER</label>
+        <input placeholder="8974491990" type="text" name="PART_NUMBER" id="PART_NUMBER">
+        <br>
+        <label for="Gauge_Number">GAUGE NUMBER</label>
+        <input placeholder="085" type="text" name="Gauge_Number" id="Gauge_Number">
+        <br>
+        <label for="reading">READINGS</label>
+        <textarea placeholder='1: INNER CIRCLE CR1  [TL1]                                                            
+  X   :   3052.632    3052.632   -0.050    0.050    0.000                             
+  Y   :   -676.314    -676.314   -0.050    0.050    0.000                             
+  Z   :    636.594     636.594   -0.050    0.050    0.000                             
+ 
+2: INNER CIRCLE CR2  [TL2]                                                            
+  X   :   2821.723    2821.723   -0.050    0.050    0.000                             
+  Y   :   -676.314    -676.314   -0.050    0.050    0.000                             
+  Z   :    680.253     680.267   -0.050    0.050    0.014                             
+ '
+                name="reading" id="Reading"></textarea>
+
+                <input type="submit" value="Genereat Report" id="subbutton">
+
+       </form>
+    </div>
+<!-- gauge details end -->
+</section>       
+<section class="s2">
+<P id="generated_reprot">hello</P>
+
+</section>
+
+
+
+<script>
+ //slide show
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+
+ //slide show end
+
+</script>
+    
+  
+</body>
+</html>
