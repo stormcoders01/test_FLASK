@@ -24,18 +24,28 @@ def result():
         inputs = reading.split(":")
         inputs_01 = reading.split(":")
        
-        print(inputs)
-        print(type(inputs))
+        # print(inputs)
+        # print(type(inputs))
 
-        if ' CMM CNC                                                              \r\nPART NAME      ' in inputs:
-            reading=reading[850:]
-            reads="p name"
+        # if ' CMM CNC                                                              \r\nPART NAME      ' in inputs:
+        #     reading=reading[850:]
+        #     reads="p name"
+        # else:
+            
+        #     reading=reading[878:]
+        #     reads="no p name"
+
+
+        # inputs = data.split(":")
+
+        if " CMM CNC                                                              \nPART NAME      " in inputs:
+                    data=data[978:]
+                    reads="p name"
         else:
-            
-            reading=reading[878:]
-            reads="no p name"
-            
+                    data=data[917:]
+                    reads="no p name"
 
+       
         inputs = reading.split("                   ")
         inputs.remove(inputs[-1])
 
