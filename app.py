@@ -706,7 +706,7 @@ def result():
         print(final_stage)
 
 
-        report_details = open('/workspaces/stormcoders/stormcoders-01/Flask/JBM_OK_REPORTS/CIMTRIX_WORD_FILE.txt', encoding='utf8')
+        report_details = open('JBM_OK_REPORTS/CIMTRIX_WORD_FILE.txt', encoding='utf8')
         report_data = report_details.read()
         report_details.close()
         report_data
@@ -761,7 +761,7 @@ ELEM#      NOMINAL     ACTUAL    LOW_TOL  UPP_TOL    DEV  OUT_OF_TOL   CONTROL
         
         
         
-        file_final = open((f'/workspaces/stormcoders/stormcoders-01/Flask/JBM_OK_REPORTS/binfiles/{PRG_NUMBER}.txt').format(PRG_NUMBER),'w')
+        file_final = open((f'JBM_OK_REPORTS/BINFILES/{PRG_NUMBER}.txt').format(PRG_NUMBER),'w')
 
 
 
@@ -778,7 +778,7 @@ ELEM#      NOMINAL     ACTUAL    LOW_TOL  UPP_TOL    DEV  OUT_OF_TOL   CONTROL
 
 
 
-        file_01 = open((f'/workspaces/stormcoders/stormcoders-01/Flask/JBM_OK_REPORTS/binfiles/{PRG_NUMBER}.txt').format(PRG_NUMBER), encoding='utf8')
+        file_01 = open((f'JBM_OK_REPORTS/BINFILES/{PRG_NUMBER}.txt').format(PRG_NUMBER), encoding='utf8')
         file_1 = file_01.read()
         file_01.close()
 
@@ -787,12 +787,12 @@ ELEM#      NOMINAL     ACTUAL    LOW_TOL  UPP_TOL    DEV  OUT_OF_TOL   CONTROL
         import os 
 
         rep=PRG_NUMBER
-        removethefile = open((f'/workspaces/stormcoders/stormcoders-01/Flask/JBM_OK_REPORTS/binfiles/{rep}.txt').format(), encoding='utf8')
+        removethefile = open((f'JBM_OK_REPORTS/BINFILES/{rep}.txt').format(), encoding='utf8')
         file_11 = removethefile.read()
         removethefile.close()
         print(removethefile)
-        if os.path.exists(f'/workspaces/stormcoders/stormcoders-01/Flask/JBM_OK_REPORTS/binfiles/{rep}.txt'): 
-            os.remove(f'/workspaces/stormcoders/stormcoders-01/Flask/JBM_OK_REPORTS/binfiles/{rep}.txt')
+        if os.path.exists(f'JBM_OK_REPORTS/BINFILES/{rep}.txt'): 
+            os.remove(f'JBM_OK_REPORTS/BINFILES/{rep}.txt')
 
 
         return render_template('result.html',reading1=file_1,read=reads)
