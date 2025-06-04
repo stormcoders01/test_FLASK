@@ -39,7 +39,7 @@ def result():
         # inputs = reading.split(":")
 
         if " CMM CNC                                                              \nPART NAME      " in inputs:
-                    reading=reading[978:]
+                    reading=reading[982:]
                     reads="p name"
         else:
                     reading=reading[883:]
